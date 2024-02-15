@@ -1,0 +1,6 @@
+1. the algorithm itself: How do I plan on creating the program so she can accurately determine the amount of viable compost produced
+2. interface: how will i interface this so Jayme can accurately determine her viable compost
+3. database: I need to store all former information in a file somehow to be accessed later. Can be done using bufferRead to analyze the file for any preused conditions. If the compost formula is already existing, we do not need to add the determination back into the database
+4. Website: I need to create a login system and lock down the site to prevent hacking/exploitation to the site
+5. API: potential api's for ease of use, maybe weather or other setup to assist
+6. hosting the website: Easy step. I need to host the website so it is accessable to jayme in chile.
