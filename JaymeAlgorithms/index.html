@@ -3,41 +3,37 @@
 <head>
     <style>
         body {
-            background-image : url(rainforestvolc.jpeg);
+            background-image: url(rainforestvolc.jpeg);
             background-size: cover;
-            background-repeat: no repeat;
+            background-repeat: no-repeat;
             background-attachment: fixed;
+        }
+        .centered-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px; 
+            height: 400px; 
+        }
+        .clickbox-container {
+            text-align: center; 
+            width: 400px; 
+            margin: auto; 
         }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jayme's Composting Calculator</title>
-    <style>
-        .centered-image {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: auto;
-        width: 400px; 
-        height: 400px; 
-        object-fit: cover; 
-  }
-    </style>
-    </style>
 </head>
 <body>
-    <h1>
-        <p style="text-align: center; font-family: Arial, sans-serif;">Click on the Option you would</p>
-        <p style="text-align: center; font-family: Arial, sans-serif;">like to Select</p>
 
+    <h1 style="text-align: center; font-family: Arial, sans-serif;">Click on the Option you would like to Select</h1>
 
-        <img src="compostBagCalculator.jpeg" alt="Compost Bag Calculator" class="centered-image">
-        
-
-    </h1>
-    
-
-    <object data="" type=""></object>
+    <div class="clickbox-container">
+        <a href="compostCalculatorPage.html">
+            <img src="compostBagCalculator.jpeg" alt="Compost Bag Calculator" class="centered-image">
+        </a>
+    </div>
 
 </body>
 </html>

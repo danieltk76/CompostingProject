@@ -1,4 +1,4 @@
-package jaymesAlgorithms;
+package JaymeAlgorithms;
 
 import java.util.Scanner;
 

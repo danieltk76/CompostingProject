@@ -1,6 +1,9 @@
-package jaymesAlgorithms;
+package JaymeAlgorithms;
 
-public abstract class variableReferences 
+import java.awt.Graphics;
+import java.awt.Image;
+
+public abstract class variableReferences
 {
     protected static double nitrogenPercent;
     protected static double carbonPercent;
@@ -18,6 +21,11 @@ public abstract class variableReferences
     
         finalViableAmountComp = 30 * (CarbonMass) + NitroMass;
 
+    }
+
+    public void makeFrameNotUgly(Graphics g) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'makeFrameNotUgly'");
     }
 
 
