@@ -20,18 +20,19 @@ public class calculatorPhysical extends variableReferences {
     private JTextField dodaMath;
     private Image backgroundImage = new ImageIcon("kodkod.jpeg").getImage();
 
+    // standard no arg
     public calculatorPhysical() {
         createFrame();
         initializeComponents();
         displayFrame();
-        frame.setContentPane(new BackgroundPanel("kodkod.jpeg"));
-        displayFrame();
     }
 
+    // returns and prevents shadowing of the variable frame
     public JFrame getFrame() {
         return this.frame;
     }
 
+    // physically creates the frame
     private void createFrame() {
         frame = new JFrame(NAME);
         frame.setLocation(X_LOC, Y_LOC);
@@ -39,17 +40,21 @@ public class calculatorPhysical extends variableReferences {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
+    // initializes the lesser methods in one place
     private void initializeComponents() {
         initializeInputs();
         initializeResults();
         initializeButtons();
     }
 
+
+    // display method to initialize the visibility to true
     private void displayFrame() {
         // frame.pack();
         frame.setVisible(true);
     }
 
+    // inputs initialization for panel
     private void initializeInputs() {
         JPanel userIn = new JPanel(new FlowLayout(FlowLayout.CENTER));
         
@@ -64,6 +69,7 @@ public class calculatorPhysical extends variableReferences {
         frame.add(userIn, BorderLayout.NORTH);
     }
 
+    // initialize results method creates instances of the results and adds a layout to the panel
     private void initializeResults() {
         JPanel userRes = new JPanel(new FlowLayout(FlowLayout.CENTER));
         resultLabel = new JLabel(RESULT_PREAMBLE);
@@ -73,6 +79,7 @@ public class calculatorPhysical extends variableReferences {
         frame.add(userRes, BorderLayout.CENTER);
     }
 
+    // initializes an instance of the buttons, adds a layout, has action listeners for buttons to be actives
     private void initializeButtons() {
         JPanel userButton = new JPanel(new FlowLayout(FlowLayout.CENTER));
         JButton dodaMath = new JButton("DODAMATH");
@@ -96,6 +103,7 @@ public class calculatorPhysical extends variableReferences {
         frame.add(userButton, BorderLayout.SOUTH);
     }
 
+    // some editing to do here. getLeftNum() is designed for if the left field has a number inputed
     private double getLeftNum() {
         try {
             String text = leftOpField.getText();
@@ -109,6 +117,7 @@ public class calculatorPhysical extends variableReferences {
         }
     }
 
+    // some editing to do here. getRightNum() is designed for if the right field has a number inputed
     private double getRightNum() {
         try {
             String text = rightOpField.getText();
@@ -122,6 +131,8 @@ public class calculatorPhysical extends variableReferences {
         }
     }
 
+
+    // updates and prints the result
     private void updateResult(double result) {
         if (Double.isNaN(result)) {
             resultLabel.setText(RESULT_PREAMBLE);
@@ -130,6 +141,7 @@ public class calculatorPhysical extends variableReferences {
         }
     }
 
+    // method is a work in progress to change display of the calculator
     public void makeFrameNotUgly(Graphics g) {
         super.makeFrameNotUgly(g);
         g.drawImage(backgroundImage, X_LOC, Y_LOC, dodaMath);
