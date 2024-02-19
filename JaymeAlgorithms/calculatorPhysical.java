@@ -103,6 +103,7 @@ public class calculatorPhysical extends variableReferences {
         frame.add(userButton, BorderLayout.SOUTH);
     }
 
+
     // some editing to do here. getLeftNum() is designed for if the left field has a number inputed
     private double getLeftNum() {
         try {
@@ -141,12 +142,6 @@ public class calculatorPhysical extends variableReferences {
         }
     }
 
-    // method is a work in progress to change display of the calculator
-    public void makeFrameNotUgly(Graphics g) {
-        super.makeFrameNotUgly(g);
-        g.drawImage(backgroundImage, X_LOC, Y_LOC, dodaMath);
-        frame.setContentPane(frame);
-    }
-
+    
     
 }
