@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
+// needs to have variableReferences completely integrated
 public class calculatorPhysical extends variableReferences {
     private static final int X_LOC = 100;
     private static final int Y_LOC = 100;

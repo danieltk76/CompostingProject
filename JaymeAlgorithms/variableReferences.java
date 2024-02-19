@@ -47,6 +47,7 @@ public class variableReferences {
         resultLabel.setText(String.format("<html>For a %skg bag:<br>Carbon required: %.2f kg<br>Nitrogen required: %.2f kg</html>", bagSize, carbonMass, nitrogenMass));
     }
 
+    // test main method
     public static void main(String[] args) {
         createDropDownBoxAndResultDisplay();
     }
