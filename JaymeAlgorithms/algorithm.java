@@ -1,10 +1,14 @@
 package JaymeAlgorithms;
 
+
+// ALOT TO DO HERE. NOT EVEN CLOSE TO DONES
 import java.util.Scanner;
+
 
 public abstract class algorithm extends variableReferences
 {
    
+//  Scanner to read player input with regards to the calculator. Not linked to calculator program yet
 
     public static void Scanner()
     {
@@ -33,6 +37,8 @@ public abstract class algorithm extends variableReferences
         }
     }
 
+    // where math operations occur, returns the final value we actually care about 
+
     public static double bagStorage()
     {
         mathOperations();
@@ -43,6 +49,8 @@ public abstract class algorithm extends variableReferences
     }
 
 
+
+    // test main method 
 
     public static void main(String[] args) 
     {

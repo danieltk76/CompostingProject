@@ -1,5 +1,6 @@
 package JaymeAlgorithms;
 
+// file works on the math and variable composition of the class. is not even close to completion
 import java.awt.Graphics;
 import java.awt.Image;
 
@@ -23,10 +24,7 @@ public abstract class variableReferences
 
     }
 
-    public void makeFrameNotUgly(Graphics g) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'makeFrameNotUgly'");
-    }
+    
 
 
     
