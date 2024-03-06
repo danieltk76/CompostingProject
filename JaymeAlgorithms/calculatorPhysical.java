@@ -80,7 +80,7 @@ public class calculatorPhysical extends variableReferences {
         frame.add(userRes, BorderLayout.CENTER);
     }
 
-    // initializes an instance of the buttons, adds a layout, has action listeners for buttons to be actives
+    // initializes an instance of the buttons, adds a layout, has action listeners for buttons to be active
     private void initializeButtons() {
         JPanel userButton = new JPanel(new FlowLayout(FlowLayout.CENTER));
         JButton dodaMath = new JButton("DODAMATH");
