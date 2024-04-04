@@ -1,16 +1,37 @@
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import javax.servlet;
+import javax.servlet.http.HttpServlet;
+import javax.sql.rowset.serial.SerialException;
 
-@Controller
-public class LoginController {
+import org.springframework.boot.autoconfigure.couchbase.CouchbaseProperties.Io;
 
-    @PostMapping("/login")
-    public String login(@RequestParam("username") String username, @RequestParam("password") String password) 
+import java.servlet.http.*;
+import java.io.IOException;
+
+
+public class LoginController extends HttpServlet
+{
+    protected void doPost(HttpServletRequest request, HttpServlet response) throws SerialException, IOException
     {
-        
+        String username = request.getParamester("username");
+        String password = request.getParameter("password");
 
-        return "redirect:/home";
+        boolean isAuthenticated = authenticate(username, password);
+
+        if (isAuthenticated)
+        {
+            response.sendRedirect("example address for correct login page");
+
+        }
+        else
+        {
+            response.sendRedirect("failed login page");
+        }
+
+
     }
 
+    private boolean authenticate(String username, String password)
+    {
+        return "admin".equals(username) && "password".equals(password);
+    }
 }
