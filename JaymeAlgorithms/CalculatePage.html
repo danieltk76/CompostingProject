@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Composting Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('workers.webp') no-repeat center;
+            background-size: cover;
+        }
+
+        .calculator-wrapper {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8); 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+            width: 300px; 
+            text-align: center; 
+        }
+
+        .calculator-icon {
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.2); 
+            border-radius: 5px; 
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+        }
+
+        
+        .input-box i.calculator-icon {
+            position: absolute;
+            left: 20px; 
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10; 
+        }
+
+       
+    </style>
 </head>
 <body>
-    
+    <div class="calculator-wrapper">
+        
+        <h1>Composting Calculator</h1>
+        
+        <input type="number" id="inputValue" placeholder="Enter a value">
+        <button onclick="calculate()">Calculate</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        function calculate() {
+            var input = document.getElementById('inputValue').value;
+            
+            var result = input * 2; 
+            document.getElementById('result').innerText = 'Result: ' + result;
+        }
+    </script>
 </body>
 </html>
+
