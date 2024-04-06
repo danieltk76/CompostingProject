@@ -1,15 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <form action="/login" method="post">
-    <script src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <meta charset="UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Composting Co</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.css">
     <style>
-        body, html {
+                body, html {
             height: 100%;
             margin: 0;
         }
@@ -124,45 +122,54 @@
             text-decoration: underline;
 
         }
+        .error-message {
+        color: #ff0000;
+        margin-bottom: 10px;
+        }
     </style>
 </head>
-
-
 <body>
-    <head>
-        <body>
-            <div class="wrapper">
-                <form action="">
-                    <form action="/login" method="post"></form>
-                    <h1>Login</h1>
-                    <div class="input-box">
-                        <ion-icon name="person-outline"></ion-icon>
-                        <input type="text" placeholder="Username" required>
-                        
-                        
-                    </div>
-                    <div class="input-box">
-                        <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password"
-                        placeholder="Password" required>
-                    </div>
-                    <div class="remember-forgot">
-                        <label><input type = "checkBox"> Remember me 
-                        </label>
-                        <a href="#">Forgot password? </a>
-                    </div>
-                    <button type = "submit" class="btn">Login</button>
-    
-                    <div class="register-link">
-                        <p>Dont have an account? <a
-                            href="#">Register</a></p>
-    
-                    </div>
-                </form>
+    <div class="wrapper">
+        <form action="/login" method="post">
+            <h1>Login</h1>
+            <div class="input-box">
+                <ion-icon name="person-outline"></ion-icon>
+                <input type="text" placeholder="Username" required id="username">
             </div>
-        </body>
-    
-    
-    
+            <div class="input-box">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" placeholder="Password" required id="password">
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn" id="loginBtn">Login</button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('loginBtn').addEventListener('click', function(event) {
+            event.preventDefault(); 
+            const enteredUsername = document.getElementById('username').value;
+            const enteredPassword = document.getElementById('password').value;
+            
+            const correctUsername = 'JaymeC';
+            const correctPassword = 'jjstvkddb9';
+
+            if (enteredUsername === correctUsername && enteredPassword === correctPassword) {
+
+                window.location.href = 'CalculatePage.html';
+            } else {
+                alert('Incorrect username or password. Please try again.');
+            }
+        });
+    });
+
+
+    </script>
 </body>
-</html> 
+</html>
